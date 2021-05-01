@@ -1,3 +1,9 @@
+解决的方法就简单了（两种）：
+
+    把这两个方法分开到不同的类中；
+    把注解加到类名上面
+    
+    
 TransactionDefinition 事务的一些基础信息，如超时时间、隔离级别、传播属性等
 TransactionStatus 事务的一些状态信息，如是否一个新的事务、是否已被标记为回滚
 public class DefaultTransactionDefinition implements TransactionDefinition, Serializable {
