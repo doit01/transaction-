@@ -1,3 +1,8 @@
+https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction-declarative-applying-more-than-just-tx-advice
+
+
+hibernate.connection.handling_mode property toDELAYED_ACQUISITION_AND_RELEASE_AFTER_STATEMENT
+
 解决的方法就简单了（两种）：
 
     把这两个方法分开到不同的类中；
