@@ -1,3 +1,19 @@
+声明式事务有一个局限，那就是他的最小粒度要作用在方法上！所以大家在用的时候要格外格外注意大事务的问题，尽量避免在事务中做一些无关数据库的操作，比如RPC远程调用、文件解析等，都是血泪的教训啊！！
+大事务/长事务可能造成的影响
+
+并发情况下，数据库连接池容易被撑爆
+锁定太多的数据，造成大量的阻塞和锁超时
+执行时间长，容易造成主从延迟
+回滚所需要的时间比较长
+undo log膨胀
+
+所以在业务涉及中，你一定要对大事务特别对待，比如业务设计时，把大事务拆成小事务。
+
+作者：Linn
+链接：https://juejin.cn/post/7089346387925696520
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction-declarative-applying-more-than-just-tx-advice
 
 
